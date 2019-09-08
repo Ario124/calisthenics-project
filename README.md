@@ -6,7 +6,7 @@
 ## Features
 
 ## Technologies used
-* [HTML](https://www.w3schools.com/html/) 
+* [HTML](https://www.w3schools.com/html/) -
 * [Heroku](https://www.heroku.com/)
 
 ## Testing
