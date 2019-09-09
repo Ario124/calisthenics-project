@@ -20,6 +20,16 @@ def home():
 @app.route('/add_program')
 def add_program():
     return render_template('add_program.html')
+    
+@app.route('/categories')
+def categories():
+    return render_template('categories.html')
+    
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')    
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
