@@ -7,7 +7,8 @@
 
 ## Technologies used
 * [HTML](https://www.w3schools.com/html/) -
-* [Heroku](https://www.heroku.com/)
+* [Heroku](https://www.heroku.com/) -
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - 
 
 ## Testing
 
