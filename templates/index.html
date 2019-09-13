@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
      <div class="video-container">
         <iframe src="///www.youtube.com/embed/FHBtLAvNGo4?start=14&end=103&controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=FHBtLAvNGo4&mute=1" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -14,38 +13,40 @@
                         <p class="flow-text">
                             Calisthenics is a form of exercise consisting of a variety of movements which exercise large muscle groups
                             (gross motor movements), such as running, standing, grasping, pushing, etc. These exercises are often performed rhythmically
-                            and with minimal equipment, as bodyweight exercises. They are intended to increase strength, fitness and flexibility, through
+                            and with minimal equipment, as bodyweight exercises.<span class ="hide-on-small-only"> They are intended to increase strength, fitness and flexibility, through
                             movements such as pulling, pushing, bending, jumping, or swinging, using one's bodyweight for resistance. Calisthenics can provide
                             the benefits of muscular and aerobic conditioning, in addition to improving psychomotor skills such as balance, agility and coordination.
 
                             Urban calisthenics are a form of street workout; calisthenics groups perform exercise routines in urban areas.
-                            Individuals and groups train to perform advanced calisthenics skills such as muscle-ups, levers, and various freestyle moves such as spins and flips.
+                            Individuals and groups train to perform advanced calisthenics skills such as muscle-ups, levers, and various freestyle moves such as spins and flips.</span>
+                            
                         </p>
+                        
+                        <ul class="hide-on-large-only collapsible">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">info_outline</i>Read More</div>
+                                <div class="collapsible-body"><span>They are intended to increase strength, fitness and flexibility, through
+                            movements such as pulling, pushing, bending, jumping, or swinging, using one's bodyweight for resistance. Calisthenics can provide
+                            the benefits of muscular and aerobic conditioning, in addition to improving psychomotor skills such as balance, agility and coordination.
+
+                            Urban calisthenics are a form of street workout; calisthenics groups perform exercise routines in urban areas.
+                            Individuals and groups train to perform advanced calisthenics skills such as muscle-ups, levers, and various freestyle moves such as spins and flips.</span></div>
+                            </li>
+                        </ul>
+
                         <div class="row">
-                            <div class="col s12">
-                                <h3>Possible Achievements</h3>
-                                
-                            <img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Planche.jpg">
-                            <img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Planche.jpg">
-                            <img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Planche.jpg">
-                            <img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Planche.jpg">
-                            <img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Planche.jpg">
-                            <img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Planche.jpg">
-                    
-                        <h3>Planche</h4>
-                        <img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Planche.jpg">
-                        <blockquote>
-                            <p class="flow-text">
-                                 Planche is one of the most difficult to learn skills
-                            </p>
-                           
-                        </blockquote>
+                            <div class="">
+                                    <i class="rrow material-icons">arrow_downward</i>    
+                            </div>
+                            
                         </div>
-                        </div>
+                        
                     </div>
+                    
                 </div>
-   
-                 {% for program in training_programs %}
+               <div class="row contoo">
+                    <h2 class="center-align">Training Programs</h2>
+                                         {% for program in training_programs %}
                 {{program.program_name}}
                 {{program.program_category}}
                 {{program.difficulty_level}}
@@ -55,7 +56,7 @@
                 {{program.equipment_required}}
                  {% endfor %}
                 
-                            <ul class="collapsible">
+              <ul class="collapsible">
                 <li>
                     <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
                     <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
@@ -68,7 +69,10 @@
                     <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
                     <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                 </li>
-            </ul>
+            </ul>      
+            </div>
+        
+
             
             
 {% endblock %}

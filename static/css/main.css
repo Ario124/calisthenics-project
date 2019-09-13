@@ -1,5 +1,6 @@
-.nav-wrapper {
-    background-color: #2c9cbdb8;
+nav {
+    background-color: #2c9cbd52;
+    
 }
 
 .brand-logo {
@@ -18,4 +19,22 @@
 
 .circle {
     width: 36%;
+}
+
+.video-container {
+    bottom: 65px;
+    z-index: -4;
+}
+
+.collapsible-header {
+    padding-left: 42%;
+}
+
+.rrow {
+    font-size: 100px;
+}
+
+.contoo {
+    background-color: #212525e8;
+    color: orange;
 }
