@@ -1,0 +1,52 @@
+{% extends 'base.html'%} 
+{% block content %}
+<div class="row">
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for program in training_programs %}
+        <li>
+            <div class="collapsible-header">
+                <div class="col s3">
+                    <i class="material-icons">expand_more</i>
+                    <a href="#" class="waves-effect waves-light btn btn_small">Done</a>
+                    <a href="#" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    
+                </div>
+                <div class="program_header col s9">
+                    <strong>{{program.program_name}}</strong> - {{program.difficulty_level}}
+                    
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                {{ program.description }}
+            </span>
+            <div class="row">
+                <table>
+        <thead>
+          <tr>
+              <th>Exercise</th>
+              <th>Sets</th>
+              <th>Repetitions</th>
+              <th>Equipment Required</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>Push Up</strong></td>
+            <td>5</td>
+            <td>10</td>
+            <td>Stretch Band</td>
+          </tr>
+        </tbody>
+      </table>
+            </div>
+            
+            
+            </div>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endblock %}

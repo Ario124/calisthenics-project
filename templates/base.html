@@ -31,5 +31,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     
+    
+        <!--- Problem with new Chrome version, seems like the materialize dropdown is not working properly.
+              Due to this incident you might have to click twice before being able to select.--->
+    
+    <script type="text/javascript">
+    
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+            $('select').material_select();
+        });
+        
+        document.getElementById("matfix").addEventListener("click", function(e) {
+	e.stopPropagation();
+});
+
+    </script>
+    
 </body>
 </html>

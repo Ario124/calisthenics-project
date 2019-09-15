@@ -15,11 +15,12 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('index.html', training_programs=mongo.db.training_programs.find())
+    return render_template('index.html')
     
 @app.route('/add_program')
 def add_program():
-    return render_template('add_program.html')
+    return render_template('add_program.html', categories =mongo.db.categories.find(), difficulty =mongo.db.difficulty.find())
+    
     
 @app.route('/categories')
 def categories():
@@ -29,7 +30,18 @@ def categories():
 def contact():
     return render_template('contact.html')    
 
-
+@app.route('/get_programs')
+def get_programs():
+    return render_template('programs.html', 
+        training_programs=mongo.db.training_programs.find(), description =mongo.db.description.find())
+        
+        
+@app.route('/insert_program', methods=['POST'])
+def insert_program():
+    training_programs = mongo.db.training_programs
+    training_programs.insert_one(request.form.to_dict())
+    return redirect(url_for('get_programs'))
+    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

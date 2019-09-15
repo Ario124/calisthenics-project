@@ -27,7 +27,7 @@ nav {
 }
 
 .collapsible-header {
-    padding-left: 42%;
+
 }
 
 .rrow {
@@ -37,4 +37,8 @@ nav {
 .contoo {
     background-color: #212525e8;
     color: orange;
+}
+
+.program-header {
+    margin-top: 5px;
 }
