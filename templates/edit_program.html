@@ -2,10 +2,10 @@
 {% block content %}
             
             
-            <h1 class="center-align">Add Program</h1>
+            <h1 class="center-align">Edit Program</h1>
        <div class="container">
            
-           <form action="{{url_for('insert_program')}}" method="POST" class="col s12">
+           <form action="{{url_for('update_program', program_id=program._id)}}" method="POST" class="col s12">
                 <div class="row">
             <div class="row">
                 <div class="input-field col s4">
@@ -13,66 +13,75 @@
                     <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
                   {% for cat in categories %}
+                      {% if cat.category_name == program.category_name %}
+                      <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
+                      {% else %}
                       <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                   {% endif %}
                   {% endfor %}
                 </select>
                     <label>Program Category</label>
                 </div>
             
-            
-            
-            
                 <div class="input-field col s4">
                     <i class="material-icons prefix">directions_run</i>
                     <select id="difficulty" name="difficulty_level">
                   <option value="" disabled selected>Choose Difficulty</option>
-                  {% for dif in difficulty %}
+                  {% for dif in difficulties %}
+                      {% if dif.difficulty_level == program.difficulty_level %}
+                      <option value="{{dif.difficulty_level}}" selected>{{dif.difficulty_level}}</option>
+                      {% else %}
                       <option value="{{dif.difficulty_level}}">{{dif.difficulty_level}}</option>
+                   {% endif %}
                   {% endfor %}
                 </select>
                     <label>Difficulty</label>
                 </div>
-            
              <div class="input-field col s4">
                 <i class="material-icons prefix">fitness_center</i>
-                <input id="equipment_required" name="equipment_required" type="text">
+                <input id="equipment_required" name="equipment_required" type="text" class="validate" value="{{program.equipment_required}}">
                 <label for="icon_prefix">Equipment Required</label>
             </div>
+                
             </div>
-            <div class="input-field col s8 offset-s2">
+            
+            
+            <div class="input-field col s12">
                 <h5 class="center-align">Title</h5>
-                <input id="program_name" name="program_name" type="text" class="center-align">
+                <input id="program_name" name="program_name" type="text" class="center-align validate" value="{{program.program_name}}">
+                
             </div>
             
             <div class="input-field col s4">
                 <i class="material-icons prefix">rowing</i>
-                <input id="exercise" name="exercise" type="text">
+                <input id="exercise" name="exercise" type="text" class="validate" value="{{program.exercise}}">
                 <label for="icon_prefix">Exercise</label>
             </div>
             
-           <div class="input-field col s4">
+                        <div class="input-field col s4">
                 <i class="material-icons prefix">hdr_weak</i>
-                <input id="sets_amount" name="sets_amount" type="text">
+                <input id="sets_amount" name="sets_amount" type="text" class="validate" value="{{program.sets_amount}}">
                 <label for="icon_prefix">Sets</label>
             </div>
             
-              <div class="input-field col s4">
+                                    <div class="input-field col s4">
                 <i class="material-icons prefix">hdr_strong</i>
-                <input id="reps_amount" name="reps_amount" type="text">
+                <input id="reps_amount" name="reps_amount" type="text" class="validate" value="{{program.reps_amount}}">
                 <label for="icon_prefix">Repetitions</label>
             </div>
-        <div class="container">
-           <div class="input-field col s6 offset-s3">
+            
+            <div class="container">
+            <div class="input-field col s6 offset-s3">
                 <i class="material-icons prefix">short_text</i>
-                <textarea name="description" id="description" class="materialize-textarea center-align"></textarea>
+                <textarea name="description" id="description" class="center-align materialize-textarea">{{program.description}}</textarea>
                 <label for="icon_prefix">Instructions</label>
-            </div>            
-        </div>
+            </div>                
+            </div>
 
             
         </div>
                                 <div class="row center-align">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Add This Program
+            <button class="btn waves-effect waves-light" type="submit" name="action">Edit Program
                 <i class="material-icons right">playlist_add</i>
              </button>
         </div>    

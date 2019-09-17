@@ -8,7 +8,7 @@
                 <div class="col s3">
                     <i class="material-icons">expand_more</i>
                     <a href="#" class="waves-effect waves-light btn btn_small">Done</a>
-                    <a href="#" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    <a href="#" class="waves-effect waves-light btn btn_small blue"><i class="material-icons right">edit</i>Edit</a>
                     
                 </div>
                 <div class="program_header col s9">
@@ -17,9 +17,10 @@
                 </div>
             </div>
             <div class="collapsible-body">
-                <span>
+                <h5>Description:</h5>
+                <blockquote>
                 {{ program.description }}
-            </span>
+            </blockquote>
             <div class="row">
                 <table>
         <thead>
@@ -27,19 +28,29 @@
               <th>Exercise</th>
               <th>Sets</th>
               <th>Repetitions</th>
-              <th>Equipment Required</th>
+              <th>Equipment</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <td><strong>Push Up</strong></td>
-            <td>5</td>
-            <td>10</td>
-            <td>Stretch Band</td>
+            <td><strong>{{ program.exercise }}</strong></td>
+            <td>{{ program.sets_amount }}</td>
+            <td>{{ program.reps_amount }}</td>
+            <td>{{ program.equipment_required }}</td>
           </tr>
         </tbody>
       </table>
+            
+            </div>
+            <div class="row">
+                
+                <a href="{{url_for('edit_program', program_id=program._id)}}" class="btn-floating btn-small red pulse">
+                    <i class="material-icons">edit</i></a>
+                <strong>Edit Program</strong>
+                 <a href="{{url_for('add_exercise', program_id=program._id)}}" class="btn-floating btn-small pink pulse">
+                    <i class="material-icons">edit</i></a>
+                <strong>New Exercise</strong>
             </div>
             
             

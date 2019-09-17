@@ -35,6 +35,7 @@ Tests mainly for devices:
 #### Problems that need to be solved
 
 * Navbar dropdown through materialize, its not working at the moment. should be implemented.
+* Users should be able to add new "exercises" after creating a program. It should also be desplayed below the current exercises. <-- MUST HAVE
 
 #### Browsers
 * [Google Chrome](https://www.google.com/intl/en/chrome/)
