@@ -71,6 +71,13 @@ def update_program(program_id):
 @app.route('/add_exercise')
 def add_exercise():
     return render_template('add_exercise.html')
+    
+
+@app.route('/delete_program/<program_id>')
+def delete_program(program_id):
+    mongo.db.training_programs.remove({'_id': ObjectId(program_id)})
+    return redirect(url_for('get_programs'))
+    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
