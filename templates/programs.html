@@ -1,66 +1,99 @@
-{% extends 'base.html'%} 
-{% block content %}
-<div class="row">
+{% extends 'base.html'%} {% block content %}
+<div class="container">
     <ul class="collapsible" data-collapsible="accordion">
+        <div class="row center-align">
+            <i class="material-icons icon-size icon-color">layers</i>
+        </div>
+        <h1 class="center-align expert_title">Training Programs</h1>
         {% for program in training_programs %}
         <li>
-            <div class="collapsible-header">
+            <div class="container collapsible-header">
                 <div class="col s3">
                     <i class="material-icons">expand_more</i>
-                    <a href="#" class="waves-effect waves-light btn btn_small">Done</a>
-                    <a href="#" class="waves-effect waves-light btn btn_small blue"><i class="material-icons right">edit</i>Edit</a>
-                    
+
+
                 </div>
                 <div class="program_header col s9">
-                    <strong>{{program.program_name}}</strong> - {{program.difficulty_level}}
-                    
+                    <h5 class="colored-title">{{program.program_name}}</h5> - <strong>{{program.difficulty_level}}</strong>
+
                 </div>
             </div>
-            <div class="collapsible-body">
-                <h5>Description:</h5>
-                <blockquote>
-                {{ program.description }}
-            </blockquote>
-            <div class="row">
-                <table>
-        <thead>
-          <tr>
-              <th>Exercise</th>
-              <th>Sets</th>
-              <th>Repetitions</th>
-              <th>Equipment</th>
-          </tr>
-        </thead>
+            <div class="container collapsible-body">
+                <h6 class="colored-title"><strong>Example on: </strong><a href="{{program.example_youtube}}" target="_blank">Youtube</a></h6>
+                <h5 class="colored-title">Description:</h5>
+                <blockquote class="flow-text">
+                    {{ program.description }}
+                </blockquote>
+                <div class="row">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets</th>
+                                <th>Repetitions</th>
+                                <th>Equipment</th>
+                            </tr>
+                        </thead>
 
-        <tbody>
-          <tr>
-            <td><strong>{{ program.exercise }}</strong></td>
-            <td>{{ program.sets_amount }}</td>
-            <td>{{ program.reps_amount }}</td>
-            <td>{{ program.equipment_required }}</td>
-          </tr>
-        </tbody>
-      </table>
-            
-            </div>
-            <div class="row">
-                
-                <a href="{{url_for('edit_program', program_id=program._id)}}" class="btn-floating btn-small red pulse">
+                        <tbody>
+                            <tr>
+                                <td><strong>{{ program.exercise }}</strong></td>
+                                <td>{{ program.sets_amount }}</td>
+                                <td>{{ program.reps_amount }}</td>
+                                <td>{{ program.equipment_required }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>{{ program.exercise2 }}</strong></td>
+                                <td>{{ program.sets_amount2 }}</td>
+                                <td>{{ program.reps_amount2 }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>{{ program.exercise3 }}</strong></td>
+                                <td>{{ program.sets_amount3 }}</td>
+                                <td>{{ program.reps_amount3 }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="container row">
+                    <div class="col s4">
+                        <a href="{{url_for('edit_program', program_id=program._id)}}" class="btn-floating btn-small orange pulse">
                     <i class="material-icons">edit</i></a>
-                <strong>Edit Program</strong>
-                 <a href="{{url_for('add_exercise', program_id=program._id)}}" class="btn-floating btn-small pink pulse">
-                    <i class="material-icons">edit</i></a>
-                <strong>New Exercise</strong>
-                <a href="{{url_for('delete_program', program_id=program._id)}}" class="btn-floating btn-small black pulse">
-                    <i class="material-icons">edit</i></a>
-                <strong>Delete Program</strong>
+
+                        <strong>Edit Program</strong>
+                    </div>
+                    <div class="col s4">
+                        <a href="{{url_for('add_exercise')}}" class="btn-floating btn-small green pulse">
+                    <i class="material-icons">add</i></a>
+
+                        <strong>New Exercise</strong>
+                    </div>
+                    <div class="col s4">
+                        <a href="{{url_for('delete_program', program_id=program._id)}}" class="btn-floating btn-small red pulse">
+                    <i class="material-icons">delete</i></a>
+
+                        <strong>Delete Program</strong>
+                    </div>
+
+                </div>
+
+
             </div>
-            
-            
-            </div>
+
         </li>
         {% endfor %}
 
     </ul>
+    <divider></divider>
 </div>
+<div class="row center-align">
+    <div class="col s12">
+        <button onclick="goBack()" class="btn waves-effect waves-light btn-colored">Go Back
+                     <i class="material-icons left">arrow_back</i>
+                     </button>
+    </div>
+
+</div>
+
 {% endblock %}

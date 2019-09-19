@@ -2,55 +2,53 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-                <link rel="stylesheet" href="{{url_for('static', filename="css/main.css")}}" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename="css/main.css")}}" type="text/css" />
     
     <title>Calisthenics Project</title>
+    <link rel="icon" href="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2019-09-19/50f3ab5b7a10e0ae0911c83435938cd6.ico.png">
 </head>
 <body>
-<header>
-    
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-              <a href="{{url_for('home')}}" class="brand-logo center">Calisthenics</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="{{url_for('add_program')}}">Add Program</a></li>
-                <li><a href="{{url_for('categories')}}">Categories</a></li>
-                <li><a href="{{url_for('contact')}}">Contact Us</a></li>
-              </ul>
-            </div>
-      </nav>
-    </div>
-      
-        
-</header>
-    {% block content %}
-    {% endblock %}
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    
-    
-        <!--- Problem with new Chrome version, seems like the materialize dropdown is not working properly.
-              Due to this incident you might have to click twice before being able to select.--->
-    
-    <script type="text/javascript">
-    
-        $(document).ready(function () {
-            $('.collapsible').collapsible();
-            $('select').material_select();
-        });
-        
-          $(document).ready(function(){
-    $('.modal').modal();
-  });
-        
-        document.getElementById("matfix").addEventListener("click", function(e) {
-	e.stopPropagation();
-});
+    <header>
 
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="{{url_for('home')}}" class="brand-logo center"><i class="material-icons hoomee">home</i>Calisthenics</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="{{url_for('get_programs')}}">View Programs</a></li>
+                        <li><a href="{{url_for('add_program')}}">Add Program</a></li>
+                        <li><a href="{{url_for('exercises')}}">Exercises</a></li>
+                        <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="{{url_for('get_programs')}}">View Programs</a></li>
+                <li><a href="{{url_for('add_program')}}">Add Program</a></li>
+                <li><a href="{{url_for('exercises')}}">Exercises</a></li>
+                <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+
+    </header>
+    {% block content %} {% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!--- Problem with new Chrome version, seems like the materialize dropdown is not working properly.
+              Due to this incident you might have to click twice before being able to select.--->
+
+    <script type="text/javascript">
+        M.AutoInit()
     </script>
-    
+
 </body>
+
 </html>

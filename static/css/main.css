@@ -1,5 +1,5 @@
 nav {
-    background-color: #2c9cbd52;
+    background-color: #317a90f7;
     
 }
 
@@ -27,11 +27,12 @@ nav {
 }
 
 .collapsible-header {
-
+background-color: transparent;
 }
 
-.rrow {
+.icon-size {
     font-size: 100px;
+    margin-top:30px;
 }
 
 .contoo {
@@ -41,4 +42,89 @@ nav {
 
 .program-header {
     margin-top: 5px;
+}
+
+.colored-title {
+    color: #e85a13;
+}
+
+.icon-color {
+    color: #e6d712;
+}
+
+.icon-color2 {
+    color: #24eabe;
+}
+
+.btn-colored {
+    background-color: #71c4d8e0;
+}
+
+.btn-colored:hover {
+    background-color: #3196af;
+}
+
+.img-test {
+    background-image: url("/static/images/Pushups.jpg");
+}
+
+.icon-exercises {
+    font-size: 100px;
+    margin-top:30px;
+    color: #f91d1d;
+}
+
+.expert_title {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+body {
+    background-color: #222;
+    color: white;
+}
+
+nav .brand-logo i, .hoomee {
+    font-size: 40px;
+}
+
+.select-dropdown {
+    color: white;
+}
+
+.select-dropdown li.disabled>span {
+    color: white;
+}
+
+.select-dropdown:focus {
+    color:white;
+}
+
+input {
+    color:white;
+    
+    
+}
+
+.container {
+    color:white;
+}
+
+textarea.materialize-textarea {
+    color:white;
+}
+
+.dropdown-content {
+    background-color: #313131;
+}
+
+.dropdown-content li>span {
+    color:white;
+}
+
+.select-wrapper .caret {
+    fill:white
+}
+
+.sidenav-overlay {
+    opacity: 0 !important;
 }

@@ -61,8 +61,14 @@ def update_program(program_id):
         'difficulty_level':request.form.get('difficulty_level'),
         'program_name':request.form.get('program_name'),
         'exercise':request.form.get('exercise'),
+        'exercise2':request.form.get('exercise2'),
+        'exercise3':request.form.get('exercise3'),
         'sets_amount':request.form.get('sets_amount'),
+        'sets_amount2':request.form.get('sets_amount2'),
+        'sets_amount3':request.form.get('sets_amount3'),
         'reps_amount':request.form.get('reps_amount'),
+        'reps_amount2':request.form.get('reps_amount2'),
+         'reps_amount3':request.form.get('reps_amount3'),
         'equipment_required':request.form.get('equipment_required'),
         'description':request.form.get('description')
     })
@@ -78,6 +84,10 @@ def delete_program(program_id):
     mongo.db.training_programs.remove({'_id': ObjectId(program_id)})
     return redirect(url_for('get_programs'))
     
+
+@app.route('/exercises')
+def exercises():
+    return render_template('exercises.html')
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
