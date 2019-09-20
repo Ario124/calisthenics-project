@@ -130,6 +130,16 @@ textarea.materialize-textarea {
     position: relative;
 }
 
+        .nav-icon-pad {
+ padding-left:220px;   
+ 
+}
+
+
+            .flow-text {
+        font-size: 1rem;
+    }
+
 
 /* MEDIA QUERIES */
 
@@ -144,7 +154,7 @@ textarea.materialize-textarea {
     }
 }
             
-@media all and (min-width: 768px) and (max-width: 1024px) { 
+@media all and (min-width: 769px) and (max-width: 1024px) { 
     
     nav {
         background-color: #d01e1ef7;
@@ -153,5 +163,18 @@ textarea.materialize-textarea {
         .flow-text {
         font-size: 2.1rem;
     }
+    
+}
+
+
+@media all and (min-width: 1025px) { 
+    
+        nav .brand-logo {
+            left: 43%;
+        }
+        
+        .nav-icon-pad {
+ padding-left:190px;   
+}
     
 }
