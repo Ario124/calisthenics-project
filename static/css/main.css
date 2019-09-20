@@ -140,9 +140,6 @@ textarea.materialize-textarea {
     nav {
         background-color: #d0501ef7;
     }
-    .flow-text {
-        font-size: 2.8rem;
-    }
 }
             /* TABLET */
 
@@ -151,4 +148,9 @@ textarea.materialize-textarea {
     nav {
         background-color: #d01e1ef7;
     }
+    
+        .flow-text {
+        font-size: 2.1rem;
+    }
+    
 }
