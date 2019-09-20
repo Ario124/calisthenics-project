@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="video-container">
+<div class="video-container autoplay muted">
     <iframe src="///www.youtube.com/embed/FHBtLAvNGo4?start=14&end=103&controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=FHBtLAvNGo4&mute=1" frameborder="0" allowfullscreen></iframe>
 </div>
 
@@ -35,18 +35,21 @@
     <div class="center-align row">
 
         <div class="col s4">
+            <div class="section">
             <a href="{{url_for('get_programs')}}"><i class="material-icons icon-size icon-color">layers</i></a>
-            <h4>View Programs</h4>
+            <h4><strong>View Programs</strong></h4></div>
             <p class="flow-text">Would you like to know more about our programs? Click to view!</p>
         </div>
         <div class="col s4">
+            <div class="section">
             <a href="{{url_for('add_program')}}"> <i class="material-icons icon-size icon-color2">add</i></a>
-            <h4>Add Program</h4>
+            <h4><strong>Add Program</strong></h4></div>
             <p class="flow-text">Are you interested in submitting your own program? Click here!</p>
         </div>
         <div class="col s4">
+            <div class="section">
             <a href="{{url_for('exercises')}}"> <i class="material-icons icon-size icon-exercises">fitness_center</i></a>
-            <h4>Exercises</h4>
+            <h4><strong>Exercises</strong></h4></div>
             <p class="flow-text">In need of ideas before adding your first program? Check out our exercises!</p>
         </div>
 
