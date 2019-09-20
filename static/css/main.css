@@ -127,4 +127,23 @@ textarea.materialize-textarea {
 
 .sidenav-overlay {
     opacity: 0 !important;
+    position: relative;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    nav {
+        background-color: #d0501ef7;
+    }
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+    
+    nav {
+        background-color: #d01e1ef7;
+    }
 }

@@ -1,24 +1,34 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html'%} {% block content %}
 
-            <h1>Contact</h1>
-            {% for program in training_programs %}
-                {{program.program_name}}
-            {% endfor %}
-            
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-            </ul>
-            
+
+    <div class="container">
+    
+
+    
+        <section class="container center-align">
+            <div class="row">
+                <div>
+                    <i class="material-icons prefix icon-size">mail</i>  
+                    <h1 class="center-align">Get in touch!</h1>
+                  
+                </div>
+                        
+                <!---------CONTACT FORM------->
+    
+                <div class="center-form">
+                    <form>
+                        <input type="text" placeholder="Name" required/>
+                        <input type="text" placeholder="Email" required/>
+                        <input type="text" placeholder="Subject" required/>
+                        <textarea class="materialize-textarea" rows="5" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn btn-colored">Send Message</button>
+                    </form>
+                </div>
+    
+    
+            </div>
+        </section>
+        
+    </div>
+
 {% endblock %}

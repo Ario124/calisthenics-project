@@ -7,6 +7,7 @@
     
     <title>Calisthenics Project</title>
     <link rel="icon" href="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2019-09-19/50f3ab5b7a10e0ae0911c83435938cd6.ico.png">
+    
 </head>
 <body>
     <header>
@@ -26,6 +27,7 @@
             </nav>
 
             <ul class="sidenav" id="mobile-demo">
+                <li><a class="sidenav-close" href="#!"><i class="material-icons">menu</i>Close</a></li>
                 <li><a href="{{url_for('get_programs')}}">View Programs</a></li>
                 <li><a href="{{url_for('add_program')}}">Add Program</a></li>
                 <li><a href="{{url_for('exercises')}}">Exercises</a></li>
@@ -33,18 +35,11 @@
             </ul>
         </div>
 
-
-
     </header>
     {% block content %} {% endblock %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-    <!--- Problem with new Chrome version, seems like the materialize dropdown is not working properly.
-              Due to this incident you might have to click twice before being able to select.--->
-
     <script type="text/javascript">
         M.AutoInit()
     </script>
