@@ -1,5 +1,5 @@
 nav {
-    background-color: #317a90f7;
+    background-color: #1d1717f7;
     
 }
 
@@ -22,7 +22,7 @@ nav {
 }
 
 .video-container {
-    bottom: 65px;
+    bottom: 0px;
     z-index: -4;
 }
 
@@ -140,12 +140,21 @@ textarea.materialize-textarea {
         font-size: 1rem;
     }
 
+.pad-this {
+    padding-top: 24px;
+}
+
+.page-footer {
+    background-color: #1d1717f7;
+    padding-top: 0px;
+}
+
 
 /* MEDIA QUERIES */
 
 
 
-@media all and (min-width: 480px) and (max-width: 768px) { 
+@media all and (min-width: 480px) and (max-width: 767px) { 
     nav {
         background-color: #d0501ef7;
     }
@@ -154,7 +163,7 @@ textarea.materialize-textarea {
     }
 }
             
-@media all and (min-width: 769px) and (max-width: 1024px) { 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
     
     nav {
         background-color: #d01e1ef7;
@@ -164,17 +173,46 @@ textarea.materialize-textarea {
         font-size: 2.1rem;
     }
     
+    .page-footer {
+    background-color: #d01e1ef7;
+    padding-top: 0px;
+}
+    
 }
 
 
-@media all and (min-width: 1025px) { 
+@media all and (min-width: 1024px) { 
     
         nav .brand-logo {
             left: 43%;
         }
         
+        nav {
+            background-color: #317a90f7;
+        }
+        
+            .page-footer {
+    background-color: #317a90f7;
+    padding-top: 0px;
+}
+        
         .nav-icon-pad {
  padding-left:190px;   
 }
+
+            .flow-text {
+        font-size: 1.5rem;
+    }
+    
+    
+.pad-this {
+    padding-top: 0;
+}
+
+.video-container {
+    bottom: 65px;
+    z-index: -4;
+}
+
     
 }
