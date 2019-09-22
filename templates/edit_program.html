@@ -8,7 +8,7 @@
            <form action="{{url_for('update_program', program_id=program._id)}}" method="POST" class="col s12">
                 <div class="row">
             <div class="row">
-                <div class="input-field col s4">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">accessibility</i>
                     <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
@@ -23,7 +23,7 @@
                     <label>Program Category</label>
                 </div>
             
-                <div class="input-field col s4">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">directions_run</i>
                     <select id="difficulty" name="difficulty_level">
                   <option value="" disabled selected>Choose Difficulty</option>
@@ -37,7 +37,7 @@
                 </select>
                     <label>Difficulty</label>
                 </div>
-             <div class="input-field col s4">
+             <div class="input-field col s6 offset-s3">
                 <i class="material-icons prefix">fitness_center</i>
                 <input id="equipment_required" name="equipment_required" type="text" class="validate" value="{{program.equipment_required}}">
                 <label for="icon_prefix">Equipment Required</label>
@@ -46,68 +46,65 @@
             </div>
             
             
-            <div class="input-field col s8 offset-s2">
+            <div class="input-field col s10 offset-s1">
                 <h5 class="center-align">Title</h5>
                 <input id="program_name" name="program_name" type="text" class="center-align validate" value="{{program.program_name}}">
                 
             </div>
             
-            <div class="input-field col s4">
+            <div class="input-field col s9 offset-s1">
                 <i class="material-icons prefix">rowing</i>
                 <input id="exercise" name="exercise" type="text" class="validate" value="{{program.exercise}}">
-                <label for="icon_prefix">Exercise</label>
+                <label for="icon_prefix">First Exercise</label>
             </div>
             
-                        <div class="input-field col s4">
-                <i class="material-icons prefix">rowing</i>
-                <input id="exercise2" name="exercise2" type="text" class="validate" value="{{program.exercise2}}">
-                <label for="icon_prefix">Exercise2</label>
-            </div>
-            
-                        <div class="input-field col s4">
-                <i class="material-icons prefix">rowing</i>
-                <input id="exercise3" name="exercise3" type="text" class="validate" value="{{program.exercise3}}">
-                <label for="icon_prefix">Exercise3</label>
-            </div>
-            
-                        <div class="input-field col s4">
+                                    <div class="input-field col s3 offset-s1">
                 <i class="material-icons prefix">hdr_weak</i>
                 <input id="sets_amount" name="sets_amount" type="text" class="validate" value="{{program.sets_amount}}">
                 <label for="icon_prefix">Sets</label>
             </div>
-            
-                                    <div class="input-field col s4">
-                <i class="material-icons prefix">hdr_weak</i>
-                <input id="sets_amount2" name="sets_amount2" type="text" class="validate" value="{{program.sets_amount2}}">
-                <label for="icon_prefix">Sets2</label>
-            </div>
-            
-                                    <div class="input-field col s4">
-                <i class="material-icons prefix">hdr_weak</i>
-                <input id="sets_amount3" name="sets_amount3" type="text" class="validate" value="{{program.sets_amount3}}">
-                <label for="icon_prefix">Sets3</label>
-            </div>
-            
-                                    <div class="input-field col s4">
+                                                <div class="input-field col s3 offset-s3">
                 <i class="material-icons prefix">hdr_strong</i>
                 <input id="reps_amount" name="reps_amount" type="text" class="validate" value="{{program.reps_amount}}">
-                <label for="icon_prefix">Repetitions</label>
+                <label for="icon_prefix">Reps</label>
             </div>
             
-                                                <div class="input-field col s4">
+                        <div class="input-field col s9 offset-s1">
+                <i class="material-icons prefix">rowing</i>
+                <input id="exercise2" name="exercise2" type="text" class="validate" value="{{program.exercise2}}">
+                <label for="icon_prefix">Second Exercise</label>
+            </div>
+                                                <div class="input-field col s3 offset-s1">
+                <i class="material-icons prefix">hdr_weak</i>
+                <input id="sets_amount2" name="sets_amount2" type="text" class="validate" value="{{program.sets_amount2}}">
+                <label for="icon_prefix">Sets</label>
+            </div>
+                                                            <div class="input-field col s3 offset-s3">
                 <i class="material-icons prefix">hdr_strong</i>
                 <input id="reps_amount2" name="reps_amount2" type="text" class="validate" value="{{program.reps_amount2}}">
-                <label for="icon_prefix">Repetitions2</label>
+                <label for="icon_prefix">Reps</label>
+            </div>
+                        <div class="input-field col s9 offset-s1">
+                <i class="material-icons prefix">rowing</i>
+                <input id="exercise3" name="exercise3" type="text" class="validate" value="{{program.exercise3}}">
+                <label for="icon_prefix">Third Exercise</label>
             </div>
             
-                                                <div class="input-field col s4">
+            
+                                    <div class="input-field col s3 offset-s1">
+                <i class="material-icons prefix">hdr_weak</i>
+                <input id="sets_amount3" name="sets_amount3" type="text" class="validate" value="{{program.sets_amount3}}">
+                <label for="icon_prefix">Sets</label>
+            </div>
+            
+                                                <div class="input-field col s3 offset-s3">
                 <i class="material-icons prefix">hdr_strong</i>
                 <input id="reps_amount3" name="reps_amount3" type="text" class="validate" value="{{program.reps_amount3}}">
-                <label for="icon_prefix">Repetitions3</label>
+                <label for="icon_prefix">Reps</label>
             </div>
             
             <div class="container">
-            <div class="input-field col s6 offset-s3">
+            <div class="input-field col s12">
                 <i class="material-icons prefix">short_text</i>
                 <textarea name="description" id="description" class="center-align materialize-textarea">{{program.description}}</textarea>
                 <label for="icon_prefix">Instructions</label>
