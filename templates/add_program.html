@@ -9,7 +9,7 @@
     <form action="{{url_for('insert_program')}}" method="POST" class="col s12">
         <div class="row">
             <div class="row">
-                <div class="input-field col s4">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">accessibility</i>
                     <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
@@ -23,7 +23,7 @@
 
 
 
-                <div class="input-field col s4">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">directions_run</i>
                     <select id="difficulty" name="difficulty_level">
                   <option value="" disabled selected>Choose Difficulty</option>
@@ -34,73 +34,72 @@
                     <label>Difficulty</label>
                 </div>
 
-                <div class="input-field col s4">
+                <div class="input-field col s6 offset-s3">
                     <i class="material-icons prefix">fitness_center</i>
                     <input id="equipment_required" name="equipment_required" type="text" required>
                     <label for="icon_prefix">Equipment Required</label>
                 </div>
             </div>
-            <div class="input-field col s8 offset-s2">
+            <div class="input-field col s12">
                 <h5 class="center-align">Title</h5>
                 <input id="program_name" name="program_name" type="text" class="center-align" required>
             </div>
 
-            <div class="input-field col s4">
+            <div class="input-field col s12">
                 <i class="material-icons prefix">rowing</i>
                 <input id="exercise" name="exercise" type="text" required>
                 <label for="icon_prefix">First Exercise</label>
             </div>
-
-            <div class="input-field col s4">
-                <i class="material-icons prefix">rowing</i>
-                <input id="exercise2" name="exercise2" type="text" required>
-                <label for="icon_prefix">Second Exercise</label>
-            </div>
-
-            <div class="input-field col s4">
-                <i class="material-icons prefix">rowing</i>
-                <input id="exercise3" name="exercise3" type="text" required>
-                <label for="icon_prefix">Third Exercise</label>
-            </div>
-
-            <div class="input-field col s4">
+            
+                        <div class="input-field col s6">
                 <i class="material-icons prefix">hdr_weak</i>
                 <input id="sets_amount" name="sets_amount" type="text" required>
                 <label for="icon_prefix">Sets</label>
             </div>
-
-            <div class="input-field col s4">
-                <i class="material-icons prefix">hdr_weak</i>
-                <input id="sets_amount2" name="sets_amount2" type="text" required>
-                <label for="icon_prefix">Sets</label>
-            </div>
-
-            <div class="input-field col s4">
-                <i class="material-icons prefix">hdr_weak</i>
-                <input id="sets_amount3" name="sets_amount3" type="text" required>
-                <label for="icon_prefix">Sets</label>
-            </div>
-
-            <div class="input-field col s4">
+            
+                        <div class="input-field col s6">
                 <i class="material-icons prefix">hdr_strong</i>
                 <input id="reps_amount" name="reps_amount" type="text" required>
                 <label for="icon_prefix">Repetitions</label>
             </div>
 
-            <div class="input-field col s4">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">rowing</i>
+                <input id="exercise2" name="exercise2" type="text" required>
+                <label for="icon_prefix">Second Exercise</label>
+            </div>
+
+                    <div class="input-field col s6">
+                <i class="material-icons prefix">hdr_weak</i>
+                <input id="sets_amount2" name="sets_amount2" type="text" required>
+                <label for="icon_prefix">Sets</label>
+            </div>
+
+            <div class="input-field col s6">
                 <i class="material-icons prefix">hdr_strong</i>
                 <input id="reps_amount2" name="reps_amount2" type="text" required>
                 <label for="icon_prefix">Repetitions</label>
             </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">rowing</i>
+                <input id="exercise3" name="exercise3" type="text" required>
+                <label for="icon_prefix">Third Exercise</label>
+            </div>
 
-            <div class="input-field col s4">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">hdr_weak</i>
+                <input id="sets_amount3" name="sets_amount3" type="text" required>
+                <label for="icon_prefix">Sets</label>
+            </div>
+
+            <div class="input-field col s6">
                 <i class="material-icons prefix">hdr_strong</i>
                 <input id="reps_amount3" name="reps_amount3" type="text" required>
                 <label for="icon_prefix">Repetitions</label>
             </div>
 
             <div class="container">
-                <div class="input-field col s6">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">short_text</i>
                     <textarea name="description" id="description" class="materialize-textarea center-align" required></textarea>
                     <label for="icon_prefix">Instructions</label>
@@ -108,7 +107,7 @@
 
 
 
-                <div class="input-field col s6">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">video_library</i>
                     <textarea name="example_youtube" id="example_youtube" class="materialize-textarea center-align" required></textarea>
                     <label for="icon_prefix">Video link goes here</label>
