@@ -159,6 +159,7 @@ textarea.materialize-textarea {
 
 .input-field.col .prefix ~ label {
     color: #e85a13;
+    z-index: -3;
 }
 
 
