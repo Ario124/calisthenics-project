@@ -1,11 +1,26 @@
 # [Calisthenics Project](https://calisthenics-project.herokuapp.com/)
-* The main purpose of this project is to motivate people to a healthier lifestyle through training.
+The main purpose of this project is to motivate people to a healthier lifestyle through information, training videos and images.
+Users will have the possibility to interact with the data-driven web application enabling them to carry out basic
+CRUD(**C**reate, **R**ead, **U**pdate, **D**elete) functionalities.
+
+
+
 
 ## UX
+
+Users are welcome to the main page with a video introduction on what calisthenics can look like.
+Information is displayed and you can click on "Read More" if youre visiting through mobile or tablet, desktop version
+shows the entire paragraph.
+
+This web application consists of three main colored icons, **View Programs**, **Add Programs** and
+**Exercises**. These icons can be found on the home page, they will redirect
+the user to their choice of option.
 
 #### Wireframes/Mockups
 
 *
+
+
 #### User Stories
 
 * As a user I can navigate through the menu and click on the different pages displayed on the navigation bar.
