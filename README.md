@@ -18,21 +18,79 @@ the user to their choice of option.
 
 #### Wireframes/Mockups
 
-*
+* [Mobile Home](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/mobile_home.png)
+* [Mobile Programs](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/mobile_add_program.png)
+* [Mobile Exercises](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/mobile_exercises.png)
+* [Tablet Home](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/tablet_home.png)
+* [Desktop Home](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/desktop_home.png)
+* [Desktop Add Programs](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/desktop_add_program.png)
+* [Desktop View Programs](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/desktop_view_programs.png)
+* [Desktop Exercises](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/desktop_exercises.png)
+* [Desktop Contact](https://github.com/Ario124/calisthenics-project/blob/master/wireframes/desktop_contact.png)
 
 
 #### User Stories
 
 * As a user I can navigate through the menu and click on the different pages displayed on the navigation bar.
+* As a user I can access basic information about Calisthenics through the main home page.
+* As a user I am presented with a video that gives me an introduction to the site content.
+* As a user I can click on **View Programs** to access a list of programs.
+* As a user I can click on a program to extend it, and get more information about that particular program.
+* As a user I am able to click on a video link that redirects me to Youtube for further demostration.
+* As a user I have the possibility to **C**reate, **R**ead, **U**pdate and **D**elete a program.
+* As a user I can click on "Exercises" to get more information about basic exercises and expert level exercises.
+* As a user I can find the "Contact" page easily, through the navigation bar.
+* As a user I can click on the "Calisthenics" title or Home icon to return to the main page.
 
 ## Features
 
 #### Website features
 
+These are all of the features that will be available for any visitor.
+
+* Users are able to use the "burger" icon as a way to bring up the navigation (Mobile & Tablet only).
+* Users can easily browse through the website and go back by clicking on the button "back" that is at
+the bottom of the page.
+* Users can enjoy the styles that were evenly applied throughout the website.
+* Users can click on the Github Icon by the footer, This will redirect the user to my github.
+
+
+#### CRUD features
+
+These are the features that users can interact with.
+
+* Users can Create programs.
+* Users can Read programs.
+* Users can Update programs.
+* Users can Delete programs.
+* Users can also submit a youtube link while making a program, this will be displayed when reading the program.
+
+#### Features that can be implemented
+
+* Login system, where users can register and use their own account.
+* Possibility to add categories
+* Vote system, to give users the oportunity to give a thumbs up or thumbs down.
+* Option to change the style (color) of the programs created.
+
+
 ## Technologies used
-* [HTML](https://www.w3schools.com/html/) -
-* [Heroku](https://www.heroku.com/) -
-* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - 
+
+This web application uses the following technologies:
+
+* [HTML](https://www.w3schools.com/html/) - I have used HTML to put everything in place, It was used to build the structure and content.
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - The use of CSS came into play when styling the web application, I focused on
+ making sure to keep the styles clean and even to give a good lively experience. 
+* [Javascript](https://www.javascript.com/) - The Javascript used was mostly to interact with Materialize and to interact with the navigation
+ bar on scroll.
+* [Materialize CSS](http://materializecss.com) - The structure and layout of the web application was accomplished through the use of Materialize CSS.
+* [Python](https://www.python.org/) - Most of the logic comes from the backend use of Python. 
+* [Flask](https://palletsprojects.com/p/flask/) - I used Flask to render templates and handle the routing.
+* [Google Fonts](https://fonts.google.com/) - The use of Google Fonts was mainly for the Icon used on the footer.
+* [Heroku](https://www.heroku.com/) - The deployment and host of this project was done through Heroku.
+* [Github](https://github.com) - I used Github to add & commit my changes, and push to my main page.
+* [Balsamiq Mockups 3](https://balsamiq.com/) - Mockups were made from the use of Balsamiq Mockups 3.
+* [MongoDB Atlas](https://www.mongodb.com/) - The Database structure for this project was created through MongoDB Atlas.
+
 
 ## Testing
 
@@ -40,22 +98,62 @@ These tests below are to confirm that the website is working fine, and that it h
 to avoid bugs and errors.
 
 Tests mainly for devices:
+
+* Samsung Galaxy S8 & S9
 * Iphone 6/7/8
 * Tablet devices
 * Desktop
 
+On the following browsers:
+
+* **Google Chrome**
+* **Mozilla Firefox**
+* **Microsoft Edge**
+* **Internet Explorer**
+
 #### Testing website
-1. Navbar tabs should respond when the mouse is over them, turning on a darker color to highlight them.
+1. Load the home page and verify that the video is automatically played with sound muted.
+2. Verify that the navbar dissapears when scrolling down and reappears when scrolling up, should work on any of the pages available.
+3. Load the web application on Google Chrome, open Dev tools to check if there are any errors showing up.
+4. Load the web application on Chrome and try different resolutions through Dev tools to verify that the website is responsive on different resolutions.
+5. Verify that the color of the navigation bar and footer changes to indicate different resolutions.
+6. Verify that the Favicon is working and is shown on the tab once the web application has been loaded.
+7. Load index.html and make sure that the 3 icons **View Programs**, **Add Program** and **Exercises** are working properly by clicking,
+ This should redirect the user to the chosen page.
+8. Load the home page on mobile or tablet resolution and check to see that there is a "Read More" button that expands on click. 
+This should only be shown on these resolutions and not on desktop.
+9. Load any page on mobile or tablet resolution to see if the navbar is responsite to the resolutions, the 'hamburger' icon should be shown.
+10. Verify that the navbar for mobile is working properly, links should be clickable and the navbar should close if needed. 
+11. Navbar tabs should respond when the mouse is over, turning on a darker color to highlight the menu.
+12. Load "View Programs" click on a program to activate and extend the collapsible, click again to close.
+13. Load "View Programs" and scroll to the bottom, click on "Go Back" to confirm that it redirects to the previous page.
+14. Load "Add Program" and click on 'Program Category' and 'Difficulty' to verify that the categories and difficulty levels are displayed.
+15. Load "Add Program" and proceed to add the program without filling the forms. This should give out a warning that reminds the user that the 
+forms should be filled first.
+16. Verify that the program is added once the forms are filled properly.
+17. Verify that the program can be edited by loading "View Programs" choosing a program and clicking on "Edit Program"
+18. Verify that the program can be deleted.
+19. Load "Exercises" on desktop and on mobile resolution to verify that the images not displayed the same way.
+20. Load "Exercises" click on the images available, it should zoom in on click.
 
 #### Problems that need to be solved
 
-* Navbar dropdown through materialize, its not working at the moment. should be implemented.
-* Users should be able to add new "exercises" after creating a program. It should also be desplayed below the current exercises. <-- MUST HAVE
-
 #### Browsers
+
+
+
 * [Google Chrome](https://www.google.com/intl/en/chrome/)
+* [Mozilla Firefox](https://www.mozilla.org/)
+* [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge)
+* [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer) - problem with the video on the main page that is not displayed.
 
 ## Deployment
+
+The project was deployed to Heroku, and it can be achieved by following these steps:
+
+
+
+
 
 ## Media
 
