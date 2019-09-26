@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = 'calisthenics-project'
-app.config["MONGO_URI"] = 'mongodb+srv://root:pasol005@myfirstcluster-qno2b.mongodb.net/calisthenics?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 
 mongo = PyMongo(app)
