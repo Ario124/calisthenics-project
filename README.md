@@ -151,9 +151,49 @@ forms should be filled first.
 
 The project was deployed to Heroku, and it can be achieved by following these steps:
 
+Start by cloning the project typing this:
 
+```git clone https://github.com/ario124/calisthenics-project```
 
+Make sure the content is located in the root of the enviroment.
 
+Create a new application through Heroku and connect to your local repository.
+
+**Next part has to be followed correctly**
+
+Proceed to install all the necessary requirements for the project through the command line by typing:
+
+```
+sudo pip3 install flask
+sudo pip3 install pymongo
+sudo pip3 install flask_pymongo
+sudo pip3 install dnspython
+```
+By this point it is time to add the Requirements.txt file and the Procfile by typing:
+
+```
+sudo pip3 freeze --local > requirements.txt
+echo web: python app.py > Procfile
+```
+Note that this step has to be done **after** installing the previous requirements, if not done properly you might
+encounter errors when running the app on Heroku.
+
+If you have followed these steps correctly you can proceed to the creation of enviroment variables on Heroku
+such as the MONGO_URI so they are kept hidden.
+
+* Load Heroku and go to your application, proceed to click on 'Settings' and then click on 'Reveal Config Vars'
+ This is where you can add IP, PORT and MONGO_URI variables.
+* Once this is done you are ready to commit and push your changes to Heroku, use:
+```git push heroku master```
+
+If you've followed these steps incorrectly and you can't get it to work you might want to try uninstalling and trying again, if thats the case
+try this:
+
+```
+sudo pip3 uninstall -r requirements.txt -y
+
+```
+At this point you can try to install the necessary requirements in the correct order.
 
 ## Media
 

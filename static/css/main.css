@@ -57,11 +57,11 @@ background-color: transparent;
 }
 
 .btn-colored {
-    background-color: #71c4d8e0;
+    background-color: #006a84e0;
 }
 
 .btn-colored:hover {
-    background-color: #3196af;
+    background-color: #187f98e0;
 }
 
 .img-test {
@@ -162,11 +162,15 @@ textarea.materialize-textarea {
     z-index: -3;
 }
 
+.video-container {
+    z-index: 1;
+}
 
 
 
-
-
+.testk {
+    padding:10px;
+}
 
 
 
@@ -205,6 +209,11 @@ textarea.materialize-textarea {
 .materialboxed {
     left:24%;
 }
+
+.desktop-width {
+    width: 18% !important;
+}
+  
     
 }
 
@@ -254,6 +263,11 @@ textarea.materialize-textarea {
 .expert_title {
     font-size: 4.2rem;
 
+}
+    
+    
+.desktop-width {
+    width: 18% !important;
 }
     
 }
