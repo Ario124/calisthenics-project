@@ -14,8 +14,13 @@
 
                 </div>
                 <div class="program_header col s9">
-                    <h5 class="colored-title">{{program.program_name}}</h5> - <strong>{{program.difficulty_level}}</strong>
-
+                    {% if program.difficulty_level == "Beginner" %}
+                    <h5 class="colored-title">{{program.program_name}}</h5> - <strong class="beginner-color">{{program.difficulty_level}}</strong>
+                    {% elif program.difficulty_level == "Intermediate" %}
+                    <h5 class="colored-title">{{program.program_name}}</h5> - <strong class="intermediate-color">{{program.difficulty_level}}</strong>
+                    {% elif program.difficulty_level == "Advanced" %}
+                    <h5 class="colored-title">{{program.program_name}}</h5> - <strong class="advanced-color">{{program.difficulty_level}}</strong>
+                    {% endif %}
                 </div>
             </div>
             <div class="container collapsible-body">
