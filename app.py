@@ -5,14 +5,13 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-
 app.config["MONGO_DBNAME"] = 'calisthenics-project'
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
-
 
 mongo = PyMongo(app)
 
 @app.route('/')
+
 @app.route('/home')
 def home():
     return render_template('index.html')
@@ -20,7 +19,6 @@ def home():
 @app.route('/add_program')
 def add_program():
     return render_template('add_program.html', categories =mongo.db.categories.find(), difficulty =mongo.db.difficulty.find())
-    
     
 @app.route('/categories')
 def categories():
@@ -78,7 +76,6 @@ def update_program(program_id):
 def add_exercise():
     return render_template('add_exercise.html')
     
-
 @app.route('/delete_program/<program_id>')
 def delete_program(program_id):
     mongo.db.training_programs.remove({'_id': ObjectId(program_id)})
@@ -92,4 +89,4 @@ def exercises():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=False)

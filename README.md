@@ -140,7 +140,18 @@ forms should be filled first.
 20. Load "Exercises" click on the images available, it should zoom in on click.
 21. Load "Add Program" and create 3 programs with different difficulty levels, verify that this is displayed in different colors.
 
-#### Problems that need to be solved
+#### Validation
+
+Tests to verify that the code is clean.
+
+* **HTML** - I have used [HTML Validator](https://validator.w3.org/) and found some errors due to the fact that
+the validator does not recognize Jinja. Errors such as "Bad value {{url_for('home')}}" and "Illegal character in path segment: { is not allowed."
+are therefore shown.
+
+
+
+* **CSS** - I have used [CSS Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
+
 
 #### Browsers
 
@@ -201,4 +212,25 @@ At this point you can try to install the necessary requirements in the correct o
 
 ## Media
 
+The [video](https://www.youtube.com/watch?v=FHBtLAvNGo4) found on the main page comes from Youtube: **GRAVITAS (Simonster x Sebastian Linda)**
+Filmed by: Sebastian Linda
+
+Athlete: Simonster
+
+Images on the 'Exercises' page come from:
+
+[Human Flag](https://www.t-nation.com/training/how-to-perform-the-human-flag)
+
+[One Arm Handstand](https://prioritieshapeyou.tumblr.com/image/48344192182)
+
+[Planche](https://en.wikipedia.org/wiki/Planche_(exercise))
+
+
 ## Credits
+
+* The README file was written with the help of research through [Slack](https://code-institute-room.slack.com/)
+* The idea to colorize the different difficulty levels come from my tutor Juan Monetti.
+
+### Disclaimer
+
+The contents of this website are for educational purposes only.

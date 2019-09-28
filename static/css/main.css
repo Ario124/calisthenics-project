@@ -1,11 +1,44 @@
+            /*==========BODY============*/
+
+body {
+    background-color: #222;
+    color: white;
+}
+            /*==========NAV============*/
+
 nav {
     background-color: #1d1717f7;
-    
 }
 
-.brand-logo {
+nav .brand-logo i, .hoomee {
     font-size: 40px;
 }
+
+.sidenav-overlay {
+    opacity: 0 !important;
+    position: relative;
+}
+
+.nav-icon-pad {
+    padding-left: 220px;
+
+}
+            /*==========INPUT/TEXTAREA============*/
+
+input {
+    color:white;
+}
+
+textarea.materialize-textarea {
+    color:white;
+}
+
+.input-field.col .prefix ~ label {
+    color: #e85a13;
+    z-index: -3;
+}
+
+            /*==========VIDEO============*/
 
 .video-container iframe, .video-container object, .video-container embed {
     position: absolute;
@@ -13,39 +46,29 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    
-}
-
-
-.circle {
-    width: 36%;
-}
+}       
 
 .video-container {
-    bottom: 0px;
-    z-index: -4;
+    z-index: 1;
 }
+
+            /*==========LOGO============*/
+
+.brand-logo {
+    font-size: 40px;
+}
+
+             /*==========COLLAPSIBLE============*/
 
 .collapsible-header {
 background-color: transparent;
 }
 
+            /*==========ICONS============*/
+
 .icon-size {
     font-size: 80px;
     margin-top:15px;
-}
-
-.contoo {
-    background-color: #212525e8;
-    color: orange;
-}
-
-.program-header {
-    margin-top: 5px;
-}
-
-.colored-title {
-    color: #e85a13;
 }
 
 .icon-color {
@@ -56,6 +79,30 @@ background-color: transparent;
     color: #24eabe;
 }
 
+.icon-exercises {
+    font-size: 80px;
+    margin-top:15px;
+    color: #f91d1d;
+}
+
+.center-icon-read-more {
+    margin-left:29%;
+}
+
+            /*==========TITLE============*/
+            
+.colored-title {
+    color: #ffffff;
+}
+
+.expert_title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+            /*==========BUTTON============*/
+
 .btn-colored {
     background-color: #006a84e0;
 }
@@ -64,32 +111,14 @@ background-color: transparent;
     background-color: #187f98e0;
 }
 
-.img-test {
-    background-image: url("/static/images/Pushups.jpg");
-}
-
-.icon-exercises {
-    font-size: 80px;
-    margin-top:15px;
-    color: #f91d1d;
-}
-
-.expert_title {
-    font-size: 40px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-body {
-    background-color: #222;
-    color: white;
-}
-
-nav .brand-logo i, .hoomee {
-    font-size: 40px;
-}
+            /*==========DROPDOWN============*/
 
 .select-dropdown {
     color: white;
+}
+
+.select-wrapper .caret {
+    fill:white
 }
 
 .select-dropdown li.disabled>span {
@@ -97,20 +126,6 @@ nav .brand-logo i, .hoomee {
 }
 
 .select-dropdown:focus {
-    color:white;
-}
-
-input {
-    color:white;
-    
-    
-}
-
-.container {
-    color:white;
-}
-
-textarea.materialize-textarea {
     color:white;
 }
 
@@ -122,57 +137,13 @@ textarea.materialize-textarea {
     color:white;
 }
 
-.select-wrapper .caret {
-    fill:white
+            /*==========CONTAINER============*/
+
+.container {
+    color:white;
 }
 
-.sidenav-overlay {
-    opacity: 0 !important;
-    position: relative;
-}
-
-        .nav-icon-pad {
- padding-left:220px;   
- 
-}
-
-
-            .flow-text {
-        font-size: 1rem;
-    }
-
-.pad-this {
-    padding-top: 24px;
-}
-
-.page-footer {
-    background-color: #1d1717f7;
-    padding-top: 0px;
-}
-
-
-.center-icon-read-more {
-    margin-left:29%;
-}
-
-
-
-.input-field.col .prefix ~ label {
-    color: #e85a13;
-    z-index: -3;
-}
-
-.video-container {
-    z-index: 1;
-}
-
-
-
-.testk {
-    padding:10px;
-}
-
-
+            /*==========DIFFICULTY-COLORS============*/
 
 .beginner-color {
     color:green;
@@ -187,6 +158,22 @@ textarea.materialize-textarea {
     color: red;
 }
 
+            /*==========FOOTER============*/
+
+.page-footer {
+    background-color: #1d1717f7;
+    padding-top: 0px;
+}
+
+            /*==========TEXT============*/
+
+.flow-text {
+          font-size: 1rem; 
+}
+
+.padding-paragraph {
+    padding-top: 24px;
+}
 
 
 
@@ -194,7 +181,8 @@ textarea.materialize-textarea {
 
 
 
-/* MEDIA QUERIES */
+
+            /*==========MEDIA-QUERIES============*/
 
 
 
@@ -209,60 +197,58 @@ textarea.materialize-textarea {
             
 @media all and (min-width: 768px) and (max-width: 1024px) { 
     
-    nav {
-        background-color: #d01e1ef7;
-    }
-    
-        .flow-text {
-        font-size: 2.1rem;
-    }
-    
-    .page-footer {
+nav {
+    background-color: #d01e1ef7;
+}
+
+.flow-text {
+    font-size: 2.1rem;
+}
+
+.page-footer {
     background-color: #d01e1ef7;
     padding-top: 0px;
 }
 
 .center-icon-read-more {
-    margin-left:40%;
+    margin-left: 40%;
 }
 
 .materialboxed {
-    left:24%;
+    left: 24%;
 }
 
 .desktop-width {
     width: 18% !important;
 }
-  
-    
-}
 
+
+}
 
 @media all and (min-width: 1024px) { 
     
-        nav .brand-logo {
-            left: 43%;
-        }
-        
-        nav {
-            background-color: #317a90f7;
-        }
-        
-            .page-footer {
+nav .brand-logo {
+    left: 43%;
+}
+
+nav {
+    background-color: #317a90f7;
+}
+
+.page-footer {
     background-color: #317a90f7;
     padding-top: 0px;
 }
-        
-        .nav-icon-pad {
- padding-left:190px;   
+
+.nav-icon-pad {
+    padding-left: 190px;
 }
 
-            .flow-text {
-        font-size: 1.5rem;
-    }
+.flow-text {
+    font-size: 1.5rem;
+}
     
-    
-.pad-this {
+.padding-paragraph {
     padding-top: 0;
 }
 
@@ -285,9 +271,7 @@ textarea.materialize-textarea {
 
 }
     
-    
 .desktop-width {
     width: 18% !important;
 }
-    
 }
