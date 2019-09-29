@@ -213,6 +213,7 @@ At this point you can try to install the necessary requirements in the correct o
 ## Media
 
 The [video](https://www.youtube.com/watch?v=FHBtLAvNGo4) found on the main page comes from Youtube: **GRAVITAS (Simonster x Sebastian Linda)**
+
 Filmed by: Sebastian Linda
 
 Athlete: Simonster

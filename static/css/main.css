@@ -21,15 +21,19 @@ nav .brand-logo i, .hoomee {
 
 .nav-icon-pad {
     padding-left: 220px;
-
 }
+
+.sidenav {
+    width: 200px;
+}
+
             /*==========INPUT/TEXTAREA============*/
 
 input {
     color:white;
 }
 
-textarea.materialize-textarea {
+.materialize-textarea {
     color:white;
 }
 
@@ -62,6 +66,10 @@ textarea.materialize-textarea {
 
 .collapsible-header {
 background-color: transparent;
+}
+
+.collapsible {
+    border-bottom: 1px solid;
 }
 
             /*==========ICONS============*/
@@ -107,6 +115,10 @@ background-color: transparent;
     background-color: #006a84e0;
 }
 
+.back-button {
+    margin: 25px;
+}
+
 .btn-colored:hover {
     background-color: #187f98e0;
 }
@@ -146,12 +158,12 @@ background-color: transparent;
             /*==========DIFFICULTY-COLORS============*/
 
 .beginner-color {
-    color:green;
+    color:limegreen;
 }
 
 
 .intermediate-color {
-    color: orange;
+    color: orangered;
 }
 
 .advanced-color {
@@ -162,7 +174,7 @@ background-color: transparent;
 
 .page-footer {
     background-color: #1d1717f7;
-    padding-top: 0px;
+    padding-top: 0;
 }
 
             /*==========TEXT============*/
@@ -175,9 +187,25 @@ background-color: transparent;
     padding-top: 24px;
 }
 
+            /*==========BLOCKQUOTE============*/
 
+.blockquote-beginner {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 4px solid limegreen;
+}
 
+.blockquote-intermediate {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 4px solid orangered;
+}
 
+.blockquote-advanced {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 4px solid red;
+}
 
 
 
@@ -207,7 +235,7 @@ nav {
 
 .page-footer {
     background-color: #d01e1ef7;
-    padding-top: 0px;
+    padding-top: 0;
 }
 
 .center-icon-read-more {
@@ -219,7 +247,7 @@ nav {
 }
 
 .desktop-width {
-    width: 18% !important;
+    width: 41% !important;
 }
 
 
@@ -237,7 +265,7 @@ nav {
 
 .page-footer {
     background-color: #317a90f7;
-    padding-top: 0px;
+    padding-top: 0;
 }
 
 .nav-icon-pad {
@@ -272,6 +300,6 @@ nav {
 }
     
 .desktop-width {
-    width: 18% !important;
+    width: 41% !important;
 }
 }

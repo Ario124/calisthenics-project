@@ -21,20 +21,56 @@
                     <h5 class="colored-title">{{program.program_name}}</h5> - <strong class="intermediate-color">{{program.difficulty_level}}</strong>
                     {% elif program.difficulty_level == "Advanced" %}
                     <h5 class="colored-title">{{program.program_name}}</h5> - <strong class="advanced-color">{{program.difficulty_level}}</strong>
+                    {% elif not program.difficulty_level and program.program_name %}
+                    <h5>Difficulty and Title not selected.</h5>
                     {% endif %}
                 </div>
             </div>
             
                         <!---------COLLAPSIBLE WITH PROGRAM CONTENT------->
             
-            <div class="container collapsible-body">
-                <h6 class="colored-title"><strong>Example on: </strong><a href="{{program.example_youtube}}" target="_blank">Youtube</a></h6>
-                <h5 class="colored-title">Description:</h5>
-                <blockquote class="flow-text">
-                    {{ program.description }}
-                </blockquote>
-                <div class="row">
-                    <table>
+                <div class="container collapsible-body">
+                    {% if not program.example_youtube %}
+                    <h6><strong>Example on youtube not available, edit program to add.</strong></h6>
+                    {% else %}
+                    <h6 class="colored-title"><strong>Example on: </strong><a href="{{program.example_youtube}}" target="_blank">Youtube</a></h6>
+                    {% endif %}
+                    <h5 class="colored-title">Category:</h5>
+                    {% if program.difficulty_level == "Beginner" %}
+                    <blockquote class="flow-text blockquote-beginner">
+                        <strong>{{ program.category_name }}</strong>
+                    </blockquote>
+                    <h5 class="colored-title">Description:</h5>
+                    <blockquote class="flow-text blockquote-beginner">
+                        {{ program.description }}
+                    </blockquote>
+                    {% elif program.difficulty_level == "Intermediate" %}
+                    <blockquote class="flow-text blockquote-intermediate">
+                        <strong>{{ program.category_name }}</strong>
+                    </blockquote>
+                    <h5 class="colored-title">Description:</h5>
+                    <blockquote class="flow-text blockquote-intermediate">
+                        {{ program.description }}
+                    </blockquote>
+                    {% elif program.difficulty_level == "Advanced" %}
+                   <blockquote class="flow-text blockquote-advanced">
+                        <strong>{{ program.category_name }}</strong>
+                    </blockquote>
+                    <h5 class="colored-title">Description:</h5>
+                    <blockquote class="flow-text blockquote-advanced">
+                        {{ program.description }}
+                    </blockquote>
+                    {% else %}
+                       <blockquote class="flow-text">
+                        <strong>{{ program.category_name }}</strong>
+                    </blockquote>
+                    <h5 class="colored-title">Description:</h5>
+                    <blockquote class="flow-text">
+                        {{ program.description }}
+                    </blockquote>
+                    {% endif %}
+                    <div class="row">
+                        <table>
                         <thead>
                             <tr>
                                 <th>Exercise</th>
@@ -69,19 +105,13 @@
                                 <!---------BUTTONS TO EDIT/DELETE PROGRAM------->
                 
                 <div class="container row">
-                    <div class="col s3 offset-s1 desktop-width">
+                    <div class="col s4 offset-s2 desktop-width">
                         <a href="{{url_for('edit_program', program_id=program._id)}}" class="btn-floating btn-small orange pulse">
                     <i class="material-icons">edit</i></a>
 
                         <strong>Edit Program</strong>
                     </div>
-                    <div class="col s3 offset-s1 desktop-width">
-                        <a href="{{url_for('add_exercise')}}" class="btn-floating btn-small green pulse">
-                    <i class="material-icons">add</i></a>
-
-                        <strong>New Exercise</strong>
-                    </div>
-                    <div class="col s3 offset-s1 desktop-width">
+                    <div class="col s4 desktop-width">
                         <a href="{{url_for('delete_program', program_id=program._id)}}" class="btn-floating btn-small red pulse">
                     <i class="material-icons">delete</i></a>
 
@@ -95,17 +125,16 @@
 
         </li>
         {% endfor %}
-
-    </ul>
-    <divider></divider>
-</div>
-<div class="row center-align">
+        <div class="row center-align">
     <div class="col s12">
-        <button onclick="window.history.back()" class="btn waves-effect waves-light btn-colored">Go Back
+        <button onclick="window.history.back()" class="btn waves-effect waves-light btn-colored back-button">Go Back
                      <i class="material-icons left">arrow_back</i>
-                     </button>
+        </button>
     </div>
 
 </div>
+    </ul>
+</div>
+
 
 {% endblock %}

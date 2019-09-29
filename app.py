@@ -1,44 +1,61 @@
+# Importing the requirements
+
 import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
+
+
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = 'calisthenics-project'
+"""
+MONGO_URI AND MONGO_DBNAME are set as environmental variables on Heroku
+to avoid including passwords or secret keys in the repository.
+"""
+
+app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
 
 @app.route('/')
 
+# Route for the home page 'index.html'
+
 @app.route('/home')
 def home():
     return render_template('index.html')
     
+# Route for the add programs page 'add_program.html'    
+
 @app.route('/add_program')
 def add_program():
     return render_template('add_program.html', categories =mongo.db.categories.find(), difficulty =mongo.db.difficulty.find())
-    
-@app.route('/categories')
-def categories():
-    return render_template('categories.html')
-    
+
+# Route for the contact page 'contact.html'
+   
 @app.route('/contact')
 def contact():
     return render_template('contact.html')    
+
+# Route for the programs page 'programs.html'
+# It will display all programs found.
 
 @app.route('/get_programs')
 def get_programs():
     return render_template('programs.html', 
         training_programs=mongo.db.training_programs.find(), description =mongo.db.description.find())
         
+# It will redirect the user to "programs.html" after it has inserted a program with "insert_one"        
         
 @app.route('/insert_program', methods=['POST'])
 def insert_program():
     training_programs = mongo.db.training_programs
     training_programs.insert_one(request.form.to_dict())
     return redirect(url_for('get_programs'))
+    
+# This will enable editing a specific program id, brings up already filled out program information.    
     
 @app.route('/edit_program/<program_id>')
 def edit_program(program_id):
@@ -49,6 +66,7 @@ def edit_program(program_id):
     difficulty_list = [difficult for difficult in _difficulty]
     return render_template('edit_program.html', program = _program, categories = category_list, difficulties = difficulty_list)
     
+# This will submit the changes done while editing. It will update the selected program with new content.    
     
 @app.route('/update_program/<program_id>', methods=['POST'])
 def update_program(program_id):
@@ -68,19 +86,19 @@ def update_program(program_id):
         'reps_amount2':request.form.get('reps_amount2'),
          'reps_amount3':request.form.get('reps_amount3'),
         'equipment_required':request.form.get('equipment_required'),
-        'description':request.form.get('description')
+        'description':request.form.get('description'),
+        'example_youtube':request.form.get('example_youtube')
     })
     return redirect(url_for('get_programs'))
     
-@app.route('/add_exercise')
-def add_exercise():
-    return render_template('add_exercise.html')
+# This will be activated if the user decides to delete a program. it finds the program id and erases it.    
     
 @app.route('/delete_program/<program_id>')
 def delete_program(program_id):
     mongo.db.training_programs.remove({'_id': ObjectId(program_id)})
     return redirect(url_for('get_programs'))
     
+# Route for exercises page "exercises.html"
 
 @app.route('/exercises')
 def exercises():
@@ -89,4 +107,4 @@ def exercises():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=False)
+            debug=True)
