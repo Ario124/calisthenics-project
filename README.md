@@ -104,13 +104,6 @@ Tests mainly for devices:
 * Tablet devices
 * Desktop
 
-On the following browsers:
-
-* **Google Chrome**
-* **Mozilla Firefox**
-* **Microsoft Edge**
-* **Internet Explorer**
-
 #### Testing website
 
 User Stories:
@@ -148,14 +141,9 @@ Tests to verify that the code is clean.
 the validator does not recognize Jinja. Errors such as "Bad value {{url_for('home')}}" and "Illegal character in path segment: { is not allowed."
 are therefore shown.
 
-
-
 * **CSS** - I have used [CSS Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
-
 #### Browsers
-
-
 
 * [Google Chrome](https://www.google.com/intl/en/chrome/)
 * [Mozilla Firefox](https://www.mozilla.org/)
